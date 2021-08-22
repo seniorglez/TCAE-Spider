@@ -3,10 +3,12 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
 
-class TcaeItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class TcaeQuestion(Item):
+    title = Field(type=str)
+    answer_1 = Field(type=str)
+    answer_2 = Field(type=str)
+    answer_3 = Field(type=str)
+    correct_answer = Field(type=int)
